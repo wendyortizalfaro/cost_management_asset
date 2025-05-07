@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_snowflake_queries
+    description: "Staging model for Snowflake query history"
+    columns:
+      - name: query_id
+        description: "Id for each query"
+        tests:
+          - unique
+          - not_null
+    

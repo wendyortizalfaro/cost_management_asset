@@ -13,4 +13,3 @@ WITH raw_queries AS (
     WHERE start_time >= dateadd('day', -90, current_timestamp())
 )
 SELECT * FROM raw_queries
-
