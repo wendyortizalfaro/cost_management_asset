@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: account_usage
+    database: SNOWFLAKE
+    schema: ACCOUNT_USAGE
+    description: "Snowflake Account Usage views for query and warehouse monitoring"
+    tables:
+      - name: query_history
+        description: "History of all queries executed"
+      - name: warehouse_metering_history
+        description: "Credits usage details by warehouse"
+      - name: metering_history
+        description: "Credits used by day and service type"
+      - name: warehouse_load_history
+        description: "Concurrency metrics per warehouse"
+      - name: table_storage_metrics
+        description: "Storage usage at the schema/table level"
