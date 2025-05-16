@@ -18,4 +18,10 @@ clean-targets:
 models:
   cost_management_asset_dbt:
     intermediate:
+      +schema: intermediate
       +materialized: view
+    curated:
+      +schema: refined
+      +materialized: table
+
+
