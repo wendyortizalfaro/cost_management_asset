@@ -4,6 +4,6 @@ SELECT
     start_time,
     error_code,
     error_message
-FROM {{ source('account_usage', 'query_history') }}
+FROM {{ ref('stg_query_history') }}
 WHERE 
     error_message IS NOT NULL

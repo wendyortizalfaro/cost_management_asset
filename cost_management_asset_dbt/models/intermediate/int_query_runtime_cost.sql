@@ -32,5 +32,5 @@ SELECT
         '5X-Large', 256, 
         '6X-Large', 512
     ) AS estimated_credits
-FROM {{ source('account_usage', 'query_history') }}
+FROM {{ ref('stg_query_history') }}
 

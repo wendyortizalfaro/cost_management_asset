@@ -17,11 +17,12 @@ clean-targets:
 
 models:
   cost_management_asset_dbt:
+    staging:
+      +schema: staging
+      +materialized: table
     intermediate:
       +schema: intermediate
       +materialized: view
     curated:
-      +schema: refined
-      +materialized: table
-
-
+      +schema: curated
+      +materialized: view
