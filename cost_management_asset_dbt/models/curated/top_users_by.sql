@@ -7,7 +7,7 @@ WITH top_users AS (
             'X-Large', 16, '2X-Large', 32, '3X-Large', 64, 
             '4X-Large', 128, '5X-Large', 256, '6X-Large', 512
         ) AS estimated_credits
-    FROM {{ ref('stg_query_history') }}
+    FROM {{ ref('int_top_users') }}
     WHERE start_time >= DATEADD(DAY, -30, CURRENT_DATE)
     AND warehouse_size IS NOT NULL
 )

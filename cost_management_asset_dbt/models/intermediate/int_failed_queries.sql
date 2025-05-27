@@ -5,5 +5,3 @@ SELECT
     error_code,
     error_message
 FROM {{ ref('stg_query_history') }}
-WHERE 
-    error_message IS NOT NULL
